@@ -1,0 +1,12 @@
+application: masq-it
+version: 2
+runtime: python
+api_version: 1
+
+handlers:
+- url: /_wave/.*
+  script: masq-it.py
+- url: /assets
+  static_dir: assets
+- url: /.*
+  script: helloworld.py
